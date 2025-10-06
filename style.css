@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #cceeff;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+#game {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#player {
+  position: absolute;
+  bottom: 10px;
+  width: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.falling {
+  position: absolute;
+  width: 50px;
+  animation: fall linear;
+}
+
+@keyframes fall {
+  from { top: -60px; }
+  to { top: 100vh; }
+}
+
+#score, #timer {
+  position: absolute;
+  top: 10px;
+  font-size: 24px;
+  color: #333;
+  padding: 10px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 10px;
+}
+
+#score { left: 10px; }
+#timer { right: 10px; }
+
+#end-screen {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+#end-image {
+  width: 150px;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#restart-btn {
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}
